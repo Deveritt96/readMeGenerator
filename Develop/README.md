@@ -1,8 +1,8 @@
-# README generator
+# Readme generator
 
 ## Description 
 
-Generates professional quality READMEs
+Generates professional quality readmes
 
 ## Screenshot
 
@@ -11,21 +11,21 @@ Generates professional quality READMEs
 
 ## installation
 
-download the repo, run npm install, run node install
+download the repo, run npm install, run node index
 
 ## Usage
 
-run node index after installing
+run node index
 
 
 ## Link to Website
 
-n/a
+N/A
 
 
 ## Credits
 
-Code Refactor Starter Code
+Starter Code
 
 ## License
 
