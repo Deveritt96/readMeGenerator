@@ -1,13 +1,87 @@
-// TODO: Include packages needed for this application
+const inquirer = require('inquirer');
+const fs = require('fs');
 
-// TODO: Create an array of questions for user input
-const questions = [];
+const generateReadMe = ({ title, description, image, install, usage, website, credits, license }) =>
+`# ${title}
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+## Description 
 
-// TODO: Create a function to initialize app
-function init() {}
+${description}
 
-// Function call to initialize app
-init();
+## Screenshot
+
+<img src="${image}" />
+
+
+## installation
+
+${install}
+
+## Usage
+
+${usage}
+
+
+## Link to Website
+
+${website}
+
+
+## Credits
+
+${credits}
+
+## License
+
+${license}`;
+
+inquirer
+  .prompt([
+    {
+      type: 'input',
+      name: 'title',
+      message: 'What is the title?',
+    },
+    {
+      type: 'input',
+      name: 'description',
+      message: 'Enter description',
+    },
+    {
+      type: 'input',
+      name: 'image',
+      message: 'enter path to image',
+    },
+    {
+      type: 'input',
+      name: 'install',
+      message: 'installation instructions',
+    },
+    {
+        type: 'input',
+        name: 'usage',
+        message: 'Usage instructions',
+      },
+    {
+      type: 'input',
+      name: 'website',
+      message: 'Enter the website URL',
+    },
+    {
+      type: 'input',
+      name: 'credits',
+      message: 'Enter your credits',
+    },
+    {
+        type: 'input',
+        name: 'license',
+        message: 'Enter the license',
+      }
+  ])
+  .then((answers) => {
+    const readMeAnswers = generateReadMe(answers);
+
+    fs.writeFile('README.md', readMeAnswers, (err) =>
+      err ? console.log(err) : console.log('Successfully created Read Me!')
+    );
+  });
