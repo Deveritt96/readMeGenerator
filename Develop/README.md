@@ -1,21 +1,21 @@
-# Readme generator
+# SVG Generator
 
 ## Description 
 
-Generates professional quality readmes
+Generates and icon using SVG technology and has an accompanying test.
 
 ## Screenshot
 
-<img src="none" />
+<img src="Null" />
 
 
 ## installation
 
-download the repo, run npm install, run node index
+download, run npm install
 
 ## Usage
 
-run node index
+Run npm install and follow the directions through the prompts
 
 
 ## Link to Website
@@ -25,7 +25,7 @@ N/A
 
 ## Credits
 
-Starter Code
+Big thank you to Chat GPT
 
 ## License
 
